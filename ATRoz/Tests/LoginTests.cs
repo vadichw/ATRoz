@@ -1,19 +1,50 @@
 using System.Threading.Tasks;
-using Microsoft.Playwright;
 using Microsoft.Playwright.NUnit;
 using NUnit.Framework;
-using ATRoz.PageObjects; // Убедитесь, что пространство имен правильно
+using Microsoft.Playwright;
 
-namespace ATRozTests
+using ATRoz.PageObjects;
+
+namespace ATRoz.Tests
 {
     [Parallelizable(ParallelScope.Self)]
     [TestFixture]
-
-    public class LoginTest : PageTest
+    public class LoginTest
     {
+        private IPlaywright _playwright;
+        private IBrowser _browser;
+        private IPage _page;
 
+        private LoginPageObjects _loginPage;
+
+        [SetUp]
+        public async Task SetUp()
+        {
+            _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
+            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false });
+            _page = await _browser.NewPageAsync();
+
+            _loginPage = new LoginPageObjects(_page);
+        }
+
+        [TearDown]
+        public async Task TearDown()
+        {
+            await _browser.CloseAsync();
+            _playwright.Dispose();
+        }
+
+        [Test]
+        public async Task Login()
+        {
+            await _loginPage.GoToMainPage("https://rozetka.com.ua");
+            await _loginPage.ClickStartLoginButton();
+            await _loginPage.EnterLoginPassword("vadik56780098@gmail.com", "56780098ab");
+        }
     }
 }
+
+
 
 
 

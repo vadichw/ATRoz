@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ATRoz"
+    "\\ATRoz",
+    "\\ATRoz\\PageObjects",
+    "\\ATRoz\\Tests"
   ],
+  "SelectedNode": "\\ATRoz\\PageObjects\\LoginPageObjects.cs",
   "PreviewInSolutionExplorer": false
 }
