@@ -1,15 +1,20 @@
-namespace ATRoz;
+using System.Threading.Tasks;
+using Microsoft.Playwright;
+using Microsoft.Playwright.NUnit;
+using NUnit.Framework;
+using ATRoz.PageObjects; // Убедитесь, что пространство имен правильно
 
-public class Tests
+namespace ATRozTests
 {
-    [SetUp]
-    public void Setup()
-    {
-    }
+    [Parallelizable(ParallelScope.Self)]
+    [TestFixture]
 
-    [Test]
-    public void Test1()
+    public class LoginTest : PageTest
     {
-        Assert.Pass();
+
     }
 }
+
+
+
+

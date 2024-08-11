@@ -404,3 +404,4 @@ C:\Vadim\ATRoz\ATRoz\obj\Debug\net8.0\refint\ATRoz.dll
 C:\Vadim\ATRoz\ATRoz\obj\Debug\net8.0\ATRoz.pdb
 C:\Vadim\ATRoz\ATRoz\obj\Debug\net8.0\ATRoz.genruntimeconfig.cache
 C:\Vadim\ATRoz\ATRoz\obj\Debug\net8.0\ref\ATRoz.dll
+C:\Vadim\ATRoz\ATRoz\obj\Debug\net8.0\ATRoz.sourcelink.json
