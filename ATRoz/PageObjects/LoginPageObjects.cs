@@ -10,6 +10,7 @@ namespace ATRoz.PageObjects
         private readonly ILocator _buttonEmail;
         private readonly ILocator _emailField;
         private readonly ILocator _passwordField;
+        private readonly ILocator _buttonSignIn;
 
         public LoginPageObjects(IPage page)
         {
@@ -21,12 +22,13 @@ namespace ATRoz.PageObjects
                 "div.modal__content > rz-auth-phone-enter > rz-link-button > button");
             _emailField = page.Locator("#email");
             _passwordField = page.Locator("#password");
+            _buttonSignIn = page.Locator("body > rz-app-root > rz-single-modal-window > div.modal__holder.modal__holder_show_animation.modal__holder--small-medium > div.modal__content > rz-auth-email-enter > rz-auth-wrapper > div > div:nth-child(1) > form > rz-submit-button > button");
 
         }
 
         public async Task GoToMainPage(string mainUrl)
         {
-            await _page.GotoAsync(mainUrl);
+            await _page.GotoAsync(mainUrl); 
         }
 
         public async Task ClickStartLoginButton()
@@ -40,7 +42,11 @@ namespace ATRoz.PageObjects
         {
             await _emailField.FillAsync(login);
             await _passwordField.FillAsync(password);
+        }
 
+        public async Task ClickSignIn()
+        {
+            await _buttonSignIn.ClickAsync();
         }
     }
 }
