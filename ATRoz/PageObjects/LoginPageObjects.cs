@@ -26,7 +26,7 @@ namespace ATRoz.PageObjects
 
         public async Task GoToMainPage(string mainUrl)
         {
-            await _page.GotoAsync(mainUrl); // Перейти по указанному URL
+            await _page.GotoAsync(mainUrl);
         }
 
         public async Task ClickStartLoginButton()
@@ -38,7 +38,6 @@ namespace ATRoz.PageObjects
 
         public async Task EnterLoginPassword(string login, string password)
         {
-            await ClickStartLoginButton();
             await _emailField.FillAsync(login);
             await _passwordField.FillAsync(password);
 
