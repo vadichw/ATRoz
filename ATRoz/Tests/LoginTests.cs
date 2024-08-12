@@ -40,7 +40,7 @@ namespace ATRoz.Tests
         {
             await _loginPage.GoToMainPage("https://rozetka.com.ua");
             await _loginPage.ClickStartLoginButton();
-            await _loginPage.EnterLoginPassword("vadik56780098@gmail.com", "56780098ab");
+            await _loginPage.EnterLoginPassword("vadik56780098@gmail.com", "56780098Ab");
             await _loginPage.ClickSignIn();
         }
     }
