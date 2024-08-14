@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ATRoz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f3cf2e1f30f5cc20dfd5a110def9081db9ca921")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cb607bc08d4e2dcb2d2bda9ef8c9a1445c873bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("ATRoz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ATRoz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
