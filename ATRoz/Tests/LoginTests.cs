@@ -21,7 +21,7 @@ namespace ATRoz.Tests
         public async Task SetUp()
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false, });
+            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false, SlowMo = 3000});
             _page = await _browser.NewPageAsync();
 
             _loginPage = new LoginPageObjects(_page);
@@ -38,22 +38,20 @@ namespace ATRoz.Tests
         [Description("Valid Login test")]
         public async Task Login()
         {
-            await _loginPage.GoToMainPage("https://rozetka.com.ua");
+            await _loginPage.GoToMainPage("https://avto.pro/");
             await _loginPage.ClickStartLoginButton();
-            await _loginPage.EnterLoginPassword("vadik56780098@gmail.com", "56780098Ab");
+            await _loginPage.EnterLoginPassword("vadichw@gmail.com", "56780098ab");
             await _loginPage.ClickSignIn();
-            //await _loginPage.GetCookies();
         }
-
 
 
         [Test]
         [Description("INVALID Login test")]
         public async Task InvalidLogin()
         {
-            await _loginPage.GoToMainPage("https://rozetka.com.ua");
+            await _loginPage.GoToMainPage("https://avto.pro/");
             await _loginPage.ClickStartLoginButton();
-            await _loginPage.EnterLoginPassword("vadik56780098@gmail.com", "123456");
+            await _loginPage.EnterLoginPassword("vadichw@gmail.com", "123456");
             await _loginPage.ClickSignIn();
         }
 

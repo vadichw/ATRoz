@@ -2,6 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\ATRoz",
+    "\\ATRoz\\bin\\Debug",
+    "\\ATRoz\\bin\\Debug\\net8.0",
     "\\ATRoz\\PageObjects",
     "\\ATRoz\\Tests"
   ],

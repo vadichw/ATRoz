@@ -21,6 +21,19 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginTests.cs",
+              "DocumentMoniker": "C:\\Vadim\\ATRoz\\ATRoz\\Tests\\LoginTests.cs",
+              "RelativeDocumentMoniker": "ATRoz\\Tests\\LoginTests.cs",
+              "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\Tests\\LoginTests.cs",
+              "RelativeToolTip": "ATRoz\\Tests\\LoginTests.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAowC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T10:21:58.037Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
@@ -30,25 +43,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginTests.cs",
-              "DocumentMoniker": "C:\\Vadim\\ATRoz\\ATRoz\\Tests\\LoginTests.cs",
-              "RelativeDocumentMoniker": "ATRoz\\Tests\\LoginTests.cs",
-              "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\Tests\\LoginTests.cs",
-              "RelativeToolTip": "ATRoz\\Tests\\LoginTests.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAADUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T10:21:58.037Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LoginPageObjects.cs",
               "DocumentMoniker": "C:\\Vadim\\ATRoz\\ATRoz\\PageObjects\\LoginPageObjects.cs",
               "RelativeDocumentMoniker": "ATRoz\\PageObjects\\LoginPageObjects.cs",
               "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\PageObjects\\LoginPageObjects.cs",
               "RelativeToolTip": "ATRoz\\PageObjects\\LoginPageObjects.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAuAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAowEwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T10:06:12.36Z",
               "EditorCaption": ""
