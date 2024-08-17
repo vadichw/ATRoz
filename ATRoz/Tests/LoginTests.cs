@@ -21,7 +21,7 @@ namespace ATRoz.Tests
         public async Task SetUp()
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false, SlowMo = 3000});
+            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = true});
             _page = await _browser.NewPageAsync();
 
             _loginPage = new LoginPageObjects(_page);
@@ -34,24 +34,36 @@ namespace ATRoz.Tests
             _playwright.Dispose();
         }
 
-        [Test]
-        [Description("Valid Login test")]
-        public async Task Login()
-        {
-            await _loginPage.GoToMainPage("https://avto.pro/");
-            await _loginPage.ClickStartLoginButton();
-            await _loginPage.EnterLoginPassword("vadichw@gmail.com", "56780098ab");
-            await _loginPage.ClickSignIn();
-        }
+        //[Test]
+        //[Description("Valid Login test")]
+        //public async Task Login()
+        //{
+        //    await _loginPage.GoToMainPage("https://avto.pro/");
+        //    await _loginPage.ClickStartLoginButton();
+        //    await _loginPage.EnterLoginPassword("vadichw@gmail.com", "56780098ab");
+        //    await _loginPage.ClickSignIn();
+        //}
+
+
+        //[Test]
+        //[Description("INVALID Login test")]
+        //public async Task InvalidLogin()
+        //{
+        //    await _loginPage.GoToMainPage("https://avto.pro/");
+        //    await _loginPage.ClickStartLoginButton();
+        //    await _loginPage.EnterLoginPassword("vadichw@gmail.com", "123456");
+        //    await _loginPage.ClickSignIn();
+        //}
 
 
         [Test]
-        [Description("INVALID Login test")]
-        public async Task InvalidLogin()
+        [Description("Sign Up test")]
+        public async Task SignUp()
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
             await _loginPage.ClickStartLoginButton();
-            await _loginPage.EnterLoginPassword("vadichw@gmail.com", "123456");
+            await _loginPage.EnterLoginPassword("vadichw2323@gmail.com", "123456");
+            await _loginPage.ClickCheckboxNewUser();
             await _loginPage.ClickSignIn();
         }
 

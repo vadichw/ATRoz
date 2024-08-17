@@ -10,7 +10,7 @@ namespace ATRoz.PageObjects
         private readonly ILocator _emailField;
         private readonly ILocator _passwordField;
         private readonly ILocator _signInButton;
-
+        private readonly ILocator _checkboxNewUser;
 
         public LoginPageObjects(IPage page)
         {
@@ -19,7 +19,8 @@ namespace ATRoz.PageObjects
             _loginButton = page.Locator("#personal-menu > div > button");
             _emailField = page.Locator(" div:nth-child(1) > div > input");
             _passwordField = page.Locator("div.auth__form__fieldset > div:nth-child(2) > div > input");
-            _signInButton = page.Locator(" div.auth__form__footer > div:nth-child(1) > button");
+            _signInButton = page.Locator("div.auth__form__footer > div:nth-child(1) > button");
+            _checkboxNewUser = page.Locator("body > div:nth-child(25) > div > div > div > div.auth__section > form > div.auth__form__control > label > input[type='checkbox']");
         }
 
         public async Task GoToMainPage(string mainUrl)
@@ -45,7 +46,10 @@ namespace ATRoz.PageObjects
             await _signInButton.ClickAsync();
         }
 
+        public async Task ClickCheckboxNewUser()
+        {
+            await _checkboxNewUser.WaitForAsync(new LocatorWaitForOptions { State = WaitForSelectorState.Visible });
+            await _checkboxNewUser.CheckAsync(new LocatorCheckOptions { Force = true });
+        }
     }
 }
-
-
