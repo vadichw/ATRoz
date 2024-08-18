@@ -5,6 +5,6 @@
     "\\ATRoz\\PageObjects",
     "\\ATRoz\\Tests"
   ],
-  "SelectedNode": "\\ATRoz\\Tests\\LoginTests.cs",
+  "SelectedNode": "\\ATRoz\\PageObjects\\LoginPageObjects.cs",
   "PreviewInSolutionExplorer": false
 }
