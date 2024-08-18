@@ -15,7 +15,6 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: List directory contents
-      run: dir /s # Добавьте этот шаг для проверки файловой структуры
     - run: dotnet build ATRoz/ATRoz/ATRoz.csproj
     - name: Ensure browsers are installed
       run: pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
