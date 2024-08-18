@@ -1,4 +1,4 @@
-name: ATests
+name: ATRoz
 on:
   push:
     branches: [ main, master ]
@@ -14,10 +14,11 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - run: dotnet build ATRoz.csproj
+    - name: Set up project directory
+      run: cd C:\Vadim\ATRoz\ATRoz\ATRoz.csproj
+    - run: dotnet build C:\Vadim\ATRoz\ATRoz\ATRoz.csproj
     - name: Ensure browsers are installed
       run: pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
     - name: Run my tests
-      run: dotnet test ATRoz.csproj
-
+      run: dotnet test C:\Vadim\ATRoz\ATRoz\ATRoz.csproj
 
