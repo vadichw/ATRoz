@@ -14,9 +14,12 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - run: dotnet build ATRoz/ATRoz/ATRoz.csproj # Относительный путь от корня репозитория
+    - name: List directory contents
+      run: dir /s # Добавьте этот шаг для проверки файловой структуры
+    - run: dotnet build ATRoz/ATRoz/ATRoz.csproj
     - name: Ensure browsers are installed
       run: pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
     - name: Run my tests
-      run: dotnet test ATRoz/ATRoz/ATRoz.csproj # Относительный путь от корня репозитория
+      run: dotnet test ATRoz/ATRoz/ATRoz.csproj
+
 
