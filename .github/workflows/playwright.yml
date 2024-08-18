@@ -15,7 +15,7 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Set up project directory
-      run: cd C:\Vadim\ATRoz\ATRoz\ATRoz.csproj
+      run: cd ATRoz
     - run: dotnet build C:\Vadim\ATRoz\ATRoz\ATRoz.csproj
     - name: Ensure browsers are installed
       run: pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
