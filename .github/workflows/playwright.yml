@@ -1,4 +1,4 @@
-name: ATRoz
+name: Run Playwright Tests
 on:
   push:
     branches: [ main, master ]
@@ -14,7 +14,8 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: List directory contents
+    - name: Install Playwright
+      run: dotnet tool restore
     - run: dotnet build ATRoz/ATRoz/ATRoz.csproj
     - name: Ensure browsers are installed
       run: pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
