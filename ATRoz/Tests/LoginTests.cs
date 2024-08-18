@@ -21,7 +21,8 @@ namespace ATRoz.Tests
         public async Task SetUp()
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false });
+            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions 
+            { Headless = false, SlowMo = 3000 });
             _page = await _browser.NewPageAsync();
 
             _loginPage = new LoginPageObjects(_page);
@@ -45,6 +46,17 @@ namespace ATRoz.Tests
             await _loginPage.GoToSettingsAccount("https://avto.pro/account/settings/personal-data/");
             await _loginPage.GetEmail();
         }
+
+        [Test]
+        [Description("INVALID Login test")]
+        public async Task InvalidLogin()
+        {
+            await _loginPage.GoToMainPage("https://avto.pro/");
+            await _loginPage.ClickStartLoginButton();
+            await _loginPage.EnterLoginPassword("sellerVC@gmail.com", "123q11");
+            await _loginPage.ClickSignIn();
+        }
+
     }
 }
 
