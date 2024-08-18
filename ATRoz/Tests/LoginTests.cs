@@ -43,35 +43,9 @@ namespace ATRoz.Tests
             await _loginPage.ClickStartLoginButton();
             await _loginPage.EnterLoginPassword("sellerVC@gmail.com", "123qwe");
             await _loginPage.ClickSignIn();
-            //await _loginPage.GoToSettingsAccount("https://avto.pro/account/settings/personal-data/");
-            await _loginPage.GoToSettingsAccount();
+            await _loginPage.GoToSettingsAccount("https://avto.pro/account/settings/personal-data/");
             await _loginPage.GetEmail();
         }
-
-
-        //[Test]
-        //[Description("INVALID Login test")]
-        //public async Task InvalidLogin()
-        //{
-        //    await _loginPage.GoToMainPage("https://avto.pro/");
-        //    await _loginPage.ClickStartLoginButton();
-        //    await _loginPage.EnterLoginPassword("vadichw@gmail.com", "123456");
-        //    await _loginPage.ClickSignIn();
-
-        //}
-
-
-        //[Test]
-        //[Description("Sign Up test")]
-        //public async Task SignUp()
-        //{
-        //    await _loginPage.GoToMainPage("https://avto.pro/");
-        //    await _loginPage.ClickStartLoginButton();
-        //    await _loginPage.EnterLoginPassword("vadichw2323@gmail.com", "123456");
-        //    await _loginPage.ClickCheckboxNewUser();
-        //    await _loginPage.ClickSignIn();
-        //}
-
     }
 }
 
