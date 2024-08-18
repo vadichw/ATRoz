@@ -19,7 +19,9 @@ jobs:
     - name: Build the project
       run: dotnet build ATRoz/ATRoz.csproj
     - name: Ensure browsers are installed
-      run: pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
+      run: |
+        cd ATRoz/bin/Debug/net8.0
+        pwsh playwright.ps1 install --with-deps
     - name: Run your tests
       run: dotnet test ATRoz/ATRoz.csproj
 
