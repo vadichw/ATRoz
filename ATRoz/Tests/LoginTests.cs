@@ -38,7 +38,6 @@ namespace ATRoz.Tests
         [Description("Valid Login test")]
         public async Task Login()
         {
-
             await _loginPage.GoToMainPage("https://avto.pro/");
             await _loginPage.ClickStartLoginButton();
             await _loginPage.EnterLoginPassword("sellerVC@gmail.com", "123qwe");
