@@ -6,22 +6,13 @@ namespace ATRoz.PageObjects
     public class LoginPageObjects
     {
         private readonly IPage _page;
-        private readonly ILocator _cookieButton;
-        private readonly ILocator _loginButton;
-        private readonly ILocator _emailField;
-        private readonly ILocator _passwordField;
-        private readonly ILocator _signInButton;
+        public LoginPageObjects(IPage page) => _page = page;
 
-        public LoginPageObjects(IPage page)
-        {
-            _page = page;
-
-            _cookieButton = page.Locator("#cookie-block > form > button");
-            _loginButton = page.Locator("#personal-menu > div > button");
-            _emailField = page.Locator(" div:nth-child(1) > div > input");
-            _passwordField = page.Locator("div.auth__form__fieldset > div:nth-child(2) > div > input");
-            _signInButton = page.Locator("div.auth__form__footer > div:nth-child(1) > button");
-        }
+        private ILocator _cookieButton => _page.Locator("#cookie-block > form > button");
+        private ILocator _loginButton => _page.Locator("#personal-menu > div > button");
+        private ILocator _emailField => _page.Locator("div:nth-child(1) > div > input");
+        private ILocator _passwordField => _page.Locator("div.auth__form__fieldset > div:nth-child(2) > div > input");
+        private ILocator _signInButton => _page.Locator("div.auth__form__footer > div:nth-child(1) > button");
 
 
         public async Task GoToMainPage(string mainUrl)
