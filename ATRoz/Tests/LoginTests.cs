@@ -21,7 +21,7 @@ namespace ATRoz.Tests
         public async Task SetUp()
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions 
+            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             { Headless = false, SlowMo = 3000 });
             _page = await _browser.NewPageAsync();
 
@@ -41,10 +41,13 @@ namespace ATRoz.Tests
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
             await _loginPage.ClickStartLoginButton();
-            await _loginPage.EnterLoginPassword("sellerVC@gmail.com", "123qwe");
+            string userEmail = "sellerVC@gmail.com";
+            string password = "123qwe";
+            await _loginPage.EnterLoginPassword(userEmail, password);
             await _loginPage.ClickSignIn();
             await _loginPage.GoToSettingsAccount("https://avto.pro/account/settings/personal-data/");
-            await _loginPage.GetEmail();
+            string emailFromSettings = await _loginPage.GetEmail();
+            await _loginPage.CheckEmails(emailFromSettings, userEmail);
         }
 
         [Test]
@@ -53,12 +56,14 @@ namespace ATRoz.Tests
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
             await _loginPage.ClickStartLoginButton();
-            await _loginPage.EnterLoginPassword("sellerVC@gmail.com", "123q11");
+            string userEmail = "sellerVC@gmail.com";
+            string password = "12312qwe";
+            await _loginPage.EnterLoginPassword(userEmail, password);
             await _loginPage.ClickSignIn();
         }
-
     }
 }
+
 
 
 
