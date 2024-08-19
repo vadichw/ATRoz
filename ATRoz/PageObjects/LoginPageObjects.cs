@@ -23,7 +23,6 @@ namespace ATRoz.PageObjects
             _passwordField = page.Locator("div.auth__form__fieldset > div:nth-child(2) > div > input");
             _signInButton = page.Locator("div.auth__form__footer > div:nth-child(1) > button");
             _userEmail = string.Empty; // User 'Empty' for initial empty string
-
         }
 
         public async Task GoToMainPage(string mainUrl)
@@ -58,7 +57,6 @@ namespace ATRoz.PageObjects
         public async Task GoToSettingsAccount(string urlAccountSettings)
         {
             await _page.GotoAsync(urlAccountSettings, new PageGotoOptions { WaitUntil = WaitUntilState.Load });
-
         }
 
 
@@ -68,7 +66,6 @@ namespace ATRoz.PageObjects
 
             if (emailElement != null)
             {
-                
                 string emailText = await emailElement.InnerTextAsync(); // Get text in element
                 Console.WriteLine(emailText);
                 return emailText;
