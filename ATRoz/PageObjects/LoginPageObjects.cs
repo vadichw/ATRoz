@@ -11,7 +11,6 @@ namespace ATRoz.PageObjects
         private readonly ILocator _emailField;
         private readonly ILocator _passwordField;
         private readonly ILocator _signInButton;
-        private string _userEmail;
 
         public LoginPageObjects(IPage page)
         {
@@ -22,8 +21,8 @@ namespace ATRoz.PageObjects
             _emailField = page.Locator(" div:nth-child(1) > div > input");
             _passwordField = page.Locator("div.auth__form__fieldset > div:nth-child(2) > div > input");
             _signInButton = page.Locator("div.auth__form__footer > div:nth-child(1) > button");
-            _userEmail = string.Empty; // User 'Empty' for initial empty string
         }
+
 
         public async Task GoToMainPage(string mainUrl)
         {
@@ -43,7 +42,6 @@ namespace ATRoz.PageObjects
         {
             await _loginButton.First.WaitForAsync(new LocatorWaitForOptions { State = WaitForSelectorState.Visible });
             await _emailField.FillAsync(login);
-            _userEmail = login;
             await _passwordField.FillAsync(password);
         }
 
@@ -62,11 +60,11 @@ namespace ATRoz.PageObjects
 
         public async Task<string> GetEmail()
         {
-            var emailElement = await _page.QuerySelectorAsync("#account-settings-app-container > div:nth-child(4) > div > div.pro-item-card__content > ul > li:nth-child(1) > a");
+            var emailElement = await _page.QuerySelectorAsync("div.pro-item-card__content > ul > li:nth-child(1) > a");
 
             if (emailElement != null)
             {
-                string emailText = await emailElement.InnerTextAsync(); // Get text in element
+                string emailText = await emailElement.InnerTextAsync();
                 Console.WriteLine(emailText);
                 return emailText;
             }
@@ -74,9 +72,18 @@ namespace ATRoz.PageObjects
             {
                 Console.WriteLine("Email not found");
                 return string.Empty;
-
             }
         }
 
+
+        public async Task CheckEmails(string emailText, string login)
+        {
+            Console.WriteLine("---Compare emails---");
+            Console.WriteLine($"Login email: {login}");
+            Console.WriteLine($"User email: {emailText}");
+            Assert.That(emailText, Is.EqualTo(login), "The emails do not match.");
+            await Task.CompletedTask;
+        }
     }
 }
+
