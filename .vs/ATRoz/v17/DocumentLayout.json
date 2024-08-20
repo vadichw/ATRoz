@@ -56,9 +56,10 @@
               "RelativeDocumentMoniker": "ATRoz\\Tests\\LoginTests.cs",
               "ToolTip": "D:\\ATRoz\\ATRoz\\Tests\\LoginTests.cs",
               "RelativeToolTip": "ATRoz\\Tests\\LoginTests.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAAD4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:29:33.641Z"
+              "WhenOpened": "2024-08-17T10:29:33.641Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -66,9 +67,9 @@
               "Title": "LoginPageObjects.cs",
               "DocumentMoniker": "D:\\ATRoz\\ATRoz\\PageObjects\\LoginPageObjects.cs",
               "RelativeDocumentMoniker": "ATRoz\\PageObjects\\LoginPageObjects.cs",
-              "ToolTip": "D:\\ATRoz\\ATRoz\\PageObjects\\LoginPageObjects.cs*",
-              "RelativeToolTip": "ATRoz\\PageObjects\\LoginPageObjects.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
+              "ToolTip": "D:\\ATRoz\\ATRoz\\PageObjects\\LoginPageObjects.cs",
+              "RelativeToolTip": "ATRoz\\PageObjects\\LoginPageObjects.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T10:06:12.36Z",
               "EditorCaption": ""
