@@ -3,11 +3,10 @@
     "",
     "\\ATRoz",
     "\\ATRoz\\bin",
-    "\\ATRoz\\bin\\Debug\\net8.0",
     "\\ATRoz\\bin\\Release",
     "\\ATRoz\\PageObjects",
     "\\ATRoz\\Tests"
   ],
-  "SelectedNode": "\\ATRoz",
+  "SelectedNode": "\\ATRoz\\PageObjects\\LoginPageObjects.cs",
   "PreviewInSolutionExplorer": false
 }
