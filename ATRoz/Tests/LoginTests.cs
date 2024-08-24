@@ -35,6 +35,7 @@ namespace ATRoz.Tests
             _playwright.Dispose();
         }
 
+
         [Test]
         [Description("Valid Login test")]
         public async Task Login()
@@ -50,14 +51,28 @@ namespace ATRoz.Tests
             await _loginPage.CheckEmails(emailFromSettings, userEmail);
         }
 
+
         [Test]
-        [Description("INVALID Login test")]
-        public async Task InvalidLogin()
+        [Description("INVALID password test")]
+        public async Task InvalidPassword()
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
             await _loginPage.ClickStartLoginButton();
             string userEmail = "sellerVC@gmail.com";
             string password = "12312qwe";
+            await _loginPage.EnterLoginPassword(userEmail, password);
+            await _loginPage.ClickSignIn();
+        }
+
+
+        [Test]
+        [Description("INVALID email test")]
+        public async Task InvalidEmail()
+        {
+            await _loginPage.GoToMainPage("https://avto.pro/");
+            await _loginPage.ClickStartLoginButton();
+            string userEmail = "sellVC@gmail.com";
+            string password = "123qwe";
             await _loginPage.EnterLoginPassword(userEmail, password);
             await _loginPage.ClickSignIn();
         }
