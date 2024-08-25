@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ATRoz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1a32c1ad7bec5da50d1768748e7fb507c6b77cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39c9e18ac9f942ee1ae5ac817cd725beea46a81d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ATRoz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ATRoz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
