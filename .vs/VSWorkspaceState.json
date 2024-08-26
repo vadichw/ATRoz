@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.github",
+    "\\.github\\workflows",
     "\\ATRoz",
     "\\ATRoz\\bin\\Debug",
     "\\ATRoz\\PageObjects",
