@@ -59,6 +59,5 @@ namespace ATRoz.Tests
             string NameAddress = "testStreetNewAdress";
             await _storePage.EnterStoreDate(NameStore, NameCity, NameAddress);
         }
-
     }
 }
