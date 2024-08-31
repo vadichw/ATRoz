@@ -36,6 +36,7 @@ namespace ATRoz.PageObjects
             await _inputCity.FillAsync(cityName);
             await _inputAddress.FillAsync(cityAddress);
             await _buttonSaveStore.ClickAsync();
+
         }
 
     }
