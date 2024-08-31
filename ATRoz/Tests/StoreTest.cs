@@ -4,11 +4,11 @@ using NUnit.Framework;
 using Microsoft.Playwright;
 
 using ATRoz.PageObjects;
+using ATRoz.Tests;
 
 
 namespace ATRoz.Tests
 {
-    [Parallelizable(ParallelScope.Self)]
     [TestFixture]
     public class StoreTest
     {
@@ -27,7 +27,9 @@ namespace ATRoz.Tests
             { Headless = true, SlowMo = 3000 });
             _page = await _browser.NewPageAsync();
 
-            _storePage = new StorePageObjects(_page);S
+            _storePage = new StorePageObjects(_page);
+            _loginPage = new LoginPageObjects(_page);
+
         }
 
         [TearDown]
@@ -37,5 +39,26 @@ namespace ATRoz.Tests
             _playwright.Dispose();
         }
 
+        [Test]
+        [Category("Store")]
+        public async Task AddStore()
+        {
+            await _loginPage.GoToMainPage("https://avto.pro/");
+            await _loginPage.ClickStartLoginButton();
+            string userEmail = "sellerVC@gmail.com";
+            string password = "123qwe";
+            await _loginPage.EnterLoginPassword(userEmail, password);
+            await _loginPage.ClickSignIn();
+            await _loginPage.GoToSettingsAccount("https://avto.pro/account/settings/personal-data/");
+            string emailFromSettings = await _loginPage.GetEmail();
+            await _loginPage.CheckEmails(emailFromSettings, userEmail);
+
+            await _storePage.ClickTabStore();
+            await _storePage.AddingNewStore();
+            string NameStore = "TestStoreAuto";
+            string NameCity = "Одеса";
+            string NameAddress = "testStreetNewAdress";
+            await _storePage.EnterStoreDate(NameStore, NameCity, NameAddress);
+        }
     }
 }
