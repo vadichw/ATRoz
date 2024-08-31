@@ -4,10 +4,9 @@
     "\\.github",
     "\\.github\\workflows",
     "\\ATRoz",
-    "\\ATRoz\\bin\\Debug",
     "\\ATRoz\\PageObjects",
     "\\ATRoz\\Tests"
   ],
-  "SelectedNode": "\\ATRoz\\Tests\\LoginTests.cs",
+  "SelectedNode": "\\ATRoz\\PageObjects\\StorePageObjects.cs",
   "PreviewInSolutionExplorer": false
 }

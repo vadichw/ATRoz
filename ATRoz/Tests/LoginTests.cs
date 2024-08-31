@@ -7,9 +7,8 @@ using ATRoz.PageObjects;
 
 namespace ATRoz.Tests
 {
-    [Parallelizable(ParallelScope.Self)]
     [TestFixture]
-    public class LoginTest
+    public class LoginTests
     {
         private IPlaywright _playwright;
         private IBrowser _browser;
@@ -39,7 +38,7 @@ namespace ATRoz.Tests
 
         [Test]
         [Description("Valid Login test")]
-        public async Task Login()
+        public async Task LoginTest()
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
             await _loginPage.ClickStartLoginButton();
