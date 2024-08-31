@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,10 +37,6 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "StoreTest.cs",
@@ -48,7 +44,7 @@
               "RelativeDocumentMoniker": "ATRoz\\Tests\\StoreTest.cs",
               "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\Tests\\StoreTest.cs",
               "RelativeToolTip": "ATRoz\\Tests\\StoreTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-24T10:21:15.66Z",
               "EditorCaption": ""
@@ -61,7 +57,7 @@
               "RelativeDocumentMoniker": "ATRoz\\PageObjects\\StorePageObjects.cs",
               "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\PageObjects\\StorePageObjects.cs",
               "RelativeToolTip": "ATRoz\\PageObjects\\StorePageObjects.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-24T10:15:18.111Z",
               "EditorCaption": ""
@@ -74,7 +70,7 @@
               "RelativeDocumentMoniker": "ATRoz\\Tests\\LoginTests.cs",
               "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\Tests\\LoginTests.cs",
               "RelativeToolTip": "ATRoz\\Tests\\LoginTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAowBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T10:29:33.641Z",
               "EditorCaption": ""
@@ -87,10 +83,14 @@
               "RelativeDocumentMoniker": "ATRoz\\PageObjects\\LoginPageObjects.cs",
               "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\PageObjects\\LoginPageObjects.cs",
               "RelativeToolTip": "ATRoz\\PageObjects\\LoginPageObjects.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T10:06:12.36Z",
+              "WhenOpened": "2024-08-25T08:08:05.078Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }

@@ -27,7 +27,7 @@ namespace ATRoz.Tests
             { Headless = true, SlowMo = 3000 });
             _page = await _browser.NewPageAsync();
 
-            _storePage = new StorePageObjects(_page);
+            _storePage = new StorePageObjects(_page);S
         }
 
         [TearDown]
