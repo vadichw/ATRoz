@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Vadim\\ATRoz\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Vadim\\ATRoz\\ATRoz\\Tests\\StoreTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATRoz\\Tests\\StoreTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Vadim\\ATRoz\\ATRoz\\PageObjects\\LoginPageObjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATRoz\\PageObjects\\LoginPageObjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Vadim\\ATRoz\\ATRoz\\PageObjects\\StorePageObjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,13 +15,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATRoz\\Tests\\LoginTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Vadim\\ATRoz\\ATRoz\\PageObjects\\LoginPageObjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATRoz\\PageObjects\\LoginPageObjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ATRoz\\.github\\workflows\\playwright.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\workflows\\playwright.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
->>>>>>> a
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Vadim\\ATRoz\\ATRoz\\Tests\\StoreTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ATRoz\\Tests\\StoreTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,11 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 3,
-=======
-          "SelectedChildIndex": 9,
->>>>>>> a
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,21 +37,16 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "StoreTest.cs",
               "DocumentMoniker": "C:\\Vadim\\ATRoz\\ATRoz\\Tests\\StoreTest.cs",
               "RelativeDocumentMoniker": "ATRoz\\Tests\\StoreTest.cs",
               "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\Tests\\StoreTest.cs",
               "RelativeToolTip": "ATRoz\\Tests\\StoreTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T10:21:15.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-24T10:21:15.66Z"
             },
             {
               "$type": "Document",
@@ -70,60 +56,38 @@
               "RelativeDocumentMoniker": "ATRoz\\PageObjects\\StorePageObjects.cs",
               "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\PageObjects\\StorePageObjects.cs",
               "RelativeToolTip": "ATRoz\\PageObjects\\StorePageObjects.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T10:15:18.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-24T10:15:18.111Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-<<<<<<< HEAD
-=======
-              "Title": "playwright.yml",
-              "DocumentMoniker": "D:\\ATRoz\\.github\\workflows\\playwright.yml",
-              "RelativeDocumentMoniker": ".github\\workflows\\playwright.yml",
-              "ToolTip": "D:\\ATRoz\\.github\\workflows\\playwright.yml",
-              "RelativeToolTip": ".github\\workflows\\playwright.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-08-20T09:29:09.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
->>>>>>> a
               "Title": "LoginTests.cs",
               "DocumentMoniker": "C:\\Vadim\\ATRoz\\ATRoz\\Tests\\LoginTests.cs",
               "RelativeDocumentMoniker": "ATRoz\\Tests\\LoginTests.cs",
               "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\Tests\\LoginTests.cs",
               "RelativeToolTip": "ATRoz\\Tests\\LoginTests.cs",
-<<<<<<< HEAD
-              "ViewState": "AgIAAAAAAAAAAAAAAAAowBsAAAAAAAAAAAAAAA==",
-=======
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAD8AAAAFAAAAAAAAAA==",
->>>>>>> a
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEUAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:29:33.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:29:33.641Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "LoginPageObjects.cs",
               "DocumentMoniker": "C:\\Vadim\\ATRoz\\ATRoz\\PageObjects\\LoginPageObjects.cs",
               "RelativeDocumentMoniker": "ATRoz\\PageObjects\\LoginPageObjects.cs",
               "ToolTip": "C:\\Vadim\\ATRoz\\ATRoz\\PageObjects\\LoginPageObjects.cs",
               "RelativeToolTip": "ATRoz\\PageObjects\\LoginPageObjects.cs",
-<<<<<<< HEAD
-              "ViewState": "AgIAACsAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
-=======
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
->>>>>>> a
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T10:06:12.36Z",
+              "WhenOpened": "2024-08-25T08:08:05.078Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }

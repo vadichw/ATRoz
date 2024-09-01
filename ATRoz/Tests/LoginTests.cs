@@ -41,7 +41,6 @@ namespace ATRoz.Tests
         public async Task LoginTest()
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
-            await _loginPage.ClickStartLoginButton();
             string userEmail = "sellerVC@gmail.com";
             string password = "123qwe";
             await _loginPage.EnterLoginPassword(userEmail, password);
@@ -57,7 +56,6 @@ namespace ATRoz.Tests
         public async Task InvalidPassword()
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
-            await _loginPage.ClickStartLoginButton();
             string userEmail = "sellerVC@gmail.com";
             string password = "12312qwe";
             await _loginPage.EnterLoginPassword(userEmail, password);
@@ -70,7 +68,6 @@ namespace ATRoz.Tests
         public async Task InvalidEmail()
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
-            await _loginPage.ClickStartLoginButton();
             string userEmail = "sellVC@gmail.com";
             string password = "123qwe";
             await _loginPage.EnterLoginPassword(userEmail, password);

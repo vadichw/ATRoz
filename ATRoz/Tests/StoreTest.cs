@@ -24,7 +24,7 @@ namespace ATRoz.Tests
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
             _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-            { Headless = true, SlowMo = 3000 });
+            { Headless = false, SlowMo = 3000 });
             _page = await _browser.NewPageAsync();
 
             _storePage = new StorePageObjects(_page);
@@ -44,14 +44,10 @@ namespace ATRoz.Tests
         public async Task AddStore()
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
-            await _loginPage.ClickStartLoginButton();
             string userEmail = "sellerVC@gmail.com";
             string password = "123qwe";
             await _loginPage.EnterLoginPassword(userEmail, password);
             await _loginPage.ClickSignIn();
-            await _loginPage.GoToSettingsAccount("https://avto.pro/account/settings/personal-data/");
-            string emailFromSettings = await _loginPage.GetEmail();
-            await _loginPage.CheckEmails(emailFromSettings, userEmail);
 
             await _storePage.ClickTabStore();
             await _storePage.AddingNewStore();

@@ -1,12 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.github",
-    "\\.github\\workflows",
     "\\ATRoz",
     "\\ATRoz\\PageObjects",
     "\\ATRoz\\Tests"
   ],
-  "SelectedNode": "\\ATRoz\\PageObjects\\StorePageObjects.cs",
+  "SelectedNode": "\\ATRoz\\PageObjects\\LoginPageObjects.cs",
   "PreviewInSolutionExplorer": false
 }

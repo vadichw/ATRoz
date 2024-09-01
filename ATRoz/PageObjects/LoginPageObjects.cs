@@ -8,31 +8,21 @@ namespace ATRoz.PageObjects
         private readonly IPage _page;
         public LoginPageObjects(IPage page) => _page = page;
 
-        private ILocator _cookieButton => _page.Locator("#cookie-block > form > button");
-        private ILocator _loginButton => _page.Locator("#personal-menu > div > button");
         private ILocator _emailField => _page.Locator("div:nth-child(1) > div > input");
-        private ILocator _passwordField => _page.Locator("div.auth__form__fieldset > div:nth-child(2) > div > input");
-        private ILocator _signInButton => _page.Locator("div.auth__form__footer > div:nth-child(1) > button");
+        private ILocator _passwordField => _page.Locator("#auth-form-container > div.auth__section > form > div.auth__form__fieldset > div:nth-child(2) > div > input");
+        private ILocator _signInButton => _page.Locator("#auth-form-container > div.auth__section > form > div.auth__form__footer > div > button");
 
 
         public async Task GoToMainPage(string mainUrl)
         {
             await _page.GotoAsync(mainUrl);
-            await _cookieButton.ClickAsync();
-        }
-
-
-        public async Task ClickStartLoginButton()
-        {
-            await _loginButton.First.WaitForAsync(new LocatorWaitForOptions { State = WaitForSelectorState.Visible });
-            await _loginButton.ClickAsync();
         }
 
 
         public async Task EnterLoginPassword(string login, string password)
         {
-            await _loginButton.First.WaitForAsync(new LocatorWaitForOptions { State = WaitForSelectorState.Visible });
             await _emailField.FillAsync(login);
+
             await _passwordField.FillAsync(password);
         }
 
