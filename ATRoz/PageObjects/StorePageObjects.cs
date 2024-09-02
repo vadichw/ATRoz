@@ -18,6 +18,7 @@ namespace ATRoz.PageObjects
         private ILocator _inputCity => _page.Locator("div.pro-select__group > input");
         private ILocator _inputAddress => _page.Locator("form > div:nth-child(5) > input");
         private ILocator _buttonSaveStore => _page.Locator("form > div.pro-form__footer.pro-form__footer--mirror > div:nth-child(1) > button");
+        private ILocator _getAddress => _page.Locator("#shop-app-container > div.shop-item__wrapper.shop-item__wrapper--row > div.shop-item__header");
 
         public async Task ClickTabStore()
         {
@@ -39,6 +40,13 @@ namespace ATRoz.PageObjects
             await _inputAddress.FillAsync(cityAddress);
             await _buttonSaveStore.ClickAsync();
         }
+
+        public async Task CheckAddress()
+        {
+            string address = await _getAddress.TextContentAsync();
+            Console.WriteLine(address);
+        }
+        
 
 
     }
