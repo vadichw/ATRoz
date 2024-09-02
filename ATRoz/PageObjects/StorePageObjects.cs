@@ -47,8 +47,6 @@ namespace ATRoz.PageObjects
             Console.WriteLine(address);
         }
         
-
-
     }
 }
 

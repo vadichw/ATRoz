@@ -55,7 +55,7 @@ namespace ATRoz.Tests
             string NameCity = "Одеса";
             string NameAddress = "testStreetNewAdress";
             await _storePage.EnterStoreDate(NameStore, NameCity, NameAddress);
-            await _storePage.CheckAddress();
+            string getAddress = await _storePage.CheckAddress();
         }
     }
 }
