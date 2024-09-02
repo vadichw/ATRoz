@@ -24,7 +24,7 @@ namespace ATRoz.Tests
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
             _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-            { Headless = false });
+            { Headless = false, SlowMo = 2000});
             _page = await _browser.NewPageAsync();
 
             _storePage = new StorePageObjects(_page);
@@ -55,7 +55,8 @@ namespace ATRoz.Tests
             string NameCity = "Одеса";
             string NameAddress = "testStreetNewAdress";
             await _storePage.EnterStoreDate(NameStore, NameCity, NameAddress);
-            string getAddress = await _storePage.CheckAddress();
+            string? getAddress = await _storePage.CheckAddress();
+
         }
     }
 }

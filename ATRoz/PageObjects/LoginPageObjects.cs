@@ -22,7 +22,6 @@ namespace ATRoz.PageObjects
         public async Task EnterLoginPassword(string login, string password)
         {
             await _emailField.FillAsync(login);
-
             await _passwordField.FillAsync(password);
         }
 
