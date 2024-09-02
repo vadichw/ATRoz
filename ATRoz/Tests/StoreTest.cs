@@ -24,7 +24,7 @@ namespace ATRoz.Tests
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
             _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-            { Headless = false, SlowMo = 3000 });
+            { Headless = false });
             _page = await _browser.NewPageAsync();
 
             _storePage = new StorePageObjects(_page);
