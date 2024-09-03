@@ -51,11 +51,12 @@ namespace ATRoz.Tests
 
             await _storePage.ClickTabStore();
             await _storePage.AddingNewStore();
-            string NameStore = "TestStoreAuto";
-            string NameCity = "Одеса";
+            string NameStore = "testStoreAuto";
+            string NameCity = "Одесса";
             string NameAddress = "testStreetNewAdress";
             await _storePage.EnterStoreDate(NameStore, NameCity, NameAddress);
             string? getAddress = await _storePage.CheckAddress();
+            await _storePage.CompareAddresses(NameAddress, NameStore, getAddress);
 
         }
     }
