@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.Playwright;
@@ -19,6 +20,7 @@ namespace ATRoz.PageObjects
         private ILocator _inputAddress => _page.Locator("form > div:nth-child(5) > input");
         private ILocator _buttonSaveStore => _page.Locator("form > div.pro-form__footer.pro-form__footer--mirror > div:nth-child(1) > button");
         private ILocator _getAddress => _page.Locator("div.shop-item__header > div");
+        private ILocator _getStoreName => _page.Locator("#shop-app-container > h1");
 
         public async Task ClickTabStore()
         {
@@ -63,6 +65,18 @@ namespace ATRoz.PageObjects
             // Use NUnit assertions to compare
             Assert.That(cityName, Is.EqualTo(exAddress), "City name does not match.");
             Assert.That(storeName, Is.EqualTo(exStoreName), "Store name does not match.");
+        }
+
+        public async Task<string?> GetStoreName()
+        {
+            string? actStoreName = await _getStoreName.TextContentAsync();
+            Console.WriteLine(actStoreName);
+            return actStoreName ?? string.Empty;
+        }
+
+        public async Task CompareNameStore(string actualName, string expectedName)
+        {
+            Assert.That(actualName, Is.EqualTo(expectedName), "City name does not match.");
         }
     }
 }

@@ -42,21 +42,26 @@ namespace ATRoz.Tests
         [Test]
         [Category("Store")]
         public async Task AddStore()
-        {
+        {   // Login
             await _loginPage.GoToMainPage("https://avto.pro/");
             string userEmail = "sellerVC@gmail.com";
             string password = "123qwe";
             await _loginPage.EnterLoginPassword(userEmail, password);
             await _loginPage.ClickSignIn();
 
+            // Entering valid store data
             await _storePage.ClickTabStore();
             await _storePage.AddingNewStore();
             string NameStore = "testStoreAuto";
             string NameCity = "Одесса";
             string NameAddress = "testStreetNewAdress";
             await _storePage.EnterStoreDate(NameStore, NameCity, NameAddress);
+
+            // Checking 
             string? getAddress = await _storePage.CheckAddress();
             await _storePage.CompareAddresses(NameCity, NameAddress, getAddress);
+            string? actualNameStore = await _storePage.GetStoreName();
+            await _storePage.CompareNameStore(actualNameStore, NameStore);
 
         }
     }
