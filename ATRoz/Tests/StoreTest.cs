@@ -62,7 +62,6 @@ namespace ATRoz.Tests
             await _storePage.CompareAddresses(NameCity, NameAddress, getAddress);
             string? actualNameStore = await _storePage.GetStoreName();
             await _storePage.CompareNameStore(actualNameStore, NameStore);
-
         }
     }
 }
