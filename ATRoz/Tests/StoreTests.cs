@@ -63,6 +63,7 @@ namespace ATRoz.Tests
             string? actualNameStore = await _storePage.GetStoreName();
             await _storePage.CompareNameStore(actualNameStore, NameStore);
 
+            // Deleting Store
             await _storePage.DeleteStore();
         }
     }
