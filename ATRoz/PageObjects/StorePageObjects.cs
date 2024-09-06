@@ -15,11 +15,11 @@ namespace ATRoz.PageObjects
         private ILocator _inputNameStore => _page.Locator("form > div:nth-child(1) > input");
         private ILocator _openListElement => _page.Locator("form > div:nth-child(2) > div > div > span");
         private ILocator _newAddressFromList => _page.Locator("div.pro-select__options.pro-select__options--dropdown > div > div > div > ul:nth-child(1) > li > div");
-        private ILocator _chooseCity => _page.Locator("form > div:nth-child(4) > div > div > div.pro-select__group");
-        private ILocator _inputCity => _page.Locator("form > div:nth-child(4) > div > div > div.pro-select__group > input");
+        private ILocator _chooseCity => _page.Locator("form > div:nth-child(4) > div > div > div > div");
+        private ILocator _inputCity => _page.Locator("div:nth-child(4) > div > div > div.pro-select__group > input");
         private ILocator _inputAddress => _page.Locator("form > div:nth-child(5) > input");
         private ILocator _buttonSaveStore => _page.Locator("form > div.pro-form__footer.pro-form__footer--mirror > div:nth-child(1) > button");
-        private ILocator _getAddress => _page.Locator("div.shop-item__header > div");
+        private ILocator _getAddress => _page.Locator("#shop-app-container > div.shop-item__wrapper.shop-item__wrapper--row > div.shop-item__header > div");
         private ILocator _getStoreName => _page.Locator("#shop-app-container > h1");
         private ILocator _deleteStoreButton => _page.Locator("#shop-app-container > div.shop-item__wrapper.shop-item__wrapper--row > div.shop-item__controls > a.shop-item__controls__btn.shop-item__controls__btn--danger");
 

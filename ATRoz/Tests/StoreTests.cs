@@ -23,13 +23,11 @@ namespace ATRoz.Tests
         public async Task SetUp()
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-            { Headless = false, SlowMo = 2000});
+            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false, });
             _page = await _browser.NewPageAsync();
 
-            _storePage = new StorePageObjects(_page);
             _loginPage = new LoginPageObjects(_page);
-
+            _storePage = new StorePageObjects(_page);
         }
 
         [TearDown]
