@@ -23,13 +23,11 @@ namespace ATRoz.Tests
         public async Task SetUp()
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-            { Headless = false, SlowMo = 2000 });
+            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false, });
             _page = await _browser.NewPageAsync();
 
-            _warehousePage = new WarehousePageObjects(_page);
             _loginPage = new LoginPageObjects(_page);
-
+            _warehousePage = new WarehousePageObjects(_page);
         }
 
         [TearDown]
@@ -51,7 +49,8 @@ namespace ATRoz.Tests
 
             await _warehousePage.OpenWarehouses();
             await _warehousePage.ClickAddStoreButton();
+            string warehouseName = "TestSklad";
+            await _warehousePage.EnterValidData(warehouseName);
         }
-
     }
 }
