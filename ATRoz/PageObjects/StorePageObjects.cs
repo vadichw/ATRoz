@@ -15,7 +15,7 @@ namespace ATRoz.PageObjects
         private ILocator _inputNameStore => _page.Locator("form > div:nth-child(1) > input");
         private ILocator _openListElement => _page.Locator("form > div:nth-child(2) > div > div > span");
         private ILocator _newAddressFromList => _page.Locator("div.pro-select__options.pro-select__options--dropdown > div > div > div > ul:nth-child(1) > li > div");
-        private ILocator _chooseCity => _page.Locator("form > div:nth-child(4) > div > div > div > div");
+        private ILocator _chooseCity => _page.Locator("form > div:nth-child(4) > div");
         private ILocator _inputCity => _page.Locator("div:nth-child(4) > div > div > div.pro-select__group > input");
         private ILocator _inputAddress => _page.Locator("form > div:nth-child(5) > input");
         private ILocator _buttonSaveStore => _page.Locator("form > div.pro-form__footer.pro-form__footer--mirror > div:nth-child(1) > button");
