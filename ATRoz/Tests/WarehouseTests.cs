@@ -10,26 +10,24 @@ using ATRoz.Tests;
 namespace ATRoz.Tests
 {
     [TestFixture]
-    public class StoreTest
+    public class WarehouseTest
     {
         private IPlaywright _playwright;
         private IBrowser _browser;
         private IPage _page;
 
         private LoginPageObjects _loginPage;
-        private StorePageObjects _storePage;
+        private WarehousePageObjects _warehousePage;
 
         [SetUp]
         public async Task SetUp()
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-            { Headless = false, SlowMo = 2000});
+            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false, });
             _page = await _browser.NewPageAsync();
 
-            _storePage = new StorePageObjects(_page);
             _loginPage = new LoginPageObjects(_page);
-
+            _warehousePage = new WarehousePageObjects(_page);
         }
 
         [TearDown]
@@ -40,8 +38,8 @@ namespace ATRoz.Tests
         }
 
         [Test]
-        [Category("Store")]
-        public async Task AddStore()
+        [Category("Warehouse")]
+        public async Task AddWarehouse()
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
             string userEmail = "sellerVC@gmail.com";
@@ -49,14 +47,10 @@ namespace ATRoz.Tests
             await _loginPage.EnterLoginPassword(userEmail, password);
             await _loginPage.ClickSignIn();
 
-            await _storePage.ClickTabStore();
-            await _storePage.AddingNewStore();
-            string NameStore = "TestStoreAuto";
-            string NameCity = "Одеса";
-            string NameAddress = "testStreetNewAdress";
-            await _storePage.EnterStoreDate(NameStore, NameCity, NameAddress);
-            string? getAddress = await _storePage.CheckAddress();
-
+            await _warehousePage.OpenWarehouses();
+            await _warehousePage.ClickAddStoreButton();
+            string warehouseName = "TestSklad";
+            await _warehousePage.EnterValidData(warehouseName);
         }
     }
 }
