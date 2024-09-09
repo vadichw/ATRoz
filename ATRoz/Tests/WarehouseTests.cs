@@ -39,7 +39,8 @@ namespace ATRoz.Tests
 
         [Test]
         [Category("Warehouse")]
-        public async Task AddWarehouse()
+        [Description("Creaating warehouse in UAH")]
+        public async Task AddWarehouseInUAH()
         {
             await _loginPage.GoToMainPage("https://avto.pro/");
             string userEmail = "sellerVC@gmail.com";
