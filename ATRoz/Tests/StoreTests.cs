@@ -42,7 +42,7 @@ namespace ATRoz.Tests
         public async Task AddStore()
         {   // Login
             await _loginPage.GoToMainPage("https://avto.pro/");
-            string userEmail = "sellerVC@gmail.com";
+            string userEmail = "sellerVC@mailinator.com";
             string password = "123qwe";
             await _loginPage.EnterLoginPassword(userEmail, password);
             await _loginPage.ClickSignIn();
