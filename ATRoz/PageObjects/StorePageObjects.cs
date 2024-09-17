@@ -52,7 +52,7 @@ namespace ATRoz.PageObjects
         }
 
 
-        public async Task CompareAddresses(string cityName, string storeName, string getStoreAddress)
+        public async Task CompareAddresses(string cityName, string storeName, string getStoreAddress!)
         {
             // Split the getStoreAddress by commas and trim any leading/trailing spaces
             var addressParts = getStoreAddress.Split(',')

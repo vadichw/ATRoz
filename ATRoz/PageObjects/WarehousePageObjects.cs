@@ -18,6 +18,8 @@ namespace ATRoz.PageObjects
         private ILocator _checkboxStore => _page.Locator("form > div:nth-child(6) > div > div > div > div > div > ul > li:nth-child(1) > div > label");
         private ILocator _saveWarehouseButtin => _page.Locator("form > div.pro-form__footer.pro-form__footer--mirror > div:nth-child(1) > button");
         private ILocator _loadPriceButton => _page.Locator("#wh-app-container > section > div > div.add-parts > div:nth-child(2) > a");
+        private ILocator _priceInput => _page.Locator("#changePositionForm > div > div > div > input[type=hidden]");
+        private ILocator _addPriceButton => _page.Locator("#changePositionForm > div > button");
 
 
 
@@ -42,9 +44,12 @@ namespace ATRoz.PageObjects
             await _saveWarehouseButtin.ClickAsync();
         }
 
+        // How to load price: TO DO
         public async Task LoadPrice()
         {
             await _loadPriceButton.ClickAsync();
+            await _priceInput.SetInputFilesAsync("D:\\ATRoz\\ATRoz\\Resourses\\русс.xlsx");
+            await _addPriceButton.ClickAsync();
         }
     }
 }
