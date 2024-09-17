@@ -52,8 +52,13 @@ namespace ATRoz.PageObjects
         }
 
 
-        public async Task CompareAddresses(string cityName, string storeName, string getStoreAddress!)
+        public Task CompareAddresses(string cityName, string storeName, string? getStoreAddress)
         {
+            if (getStoreAddress == null)
+            {
+                throw new ArgumentNullException(nameof(getStoreAddress), "Store address cannot be null.");
+            }
+
             // Split the getStoreAddress by commas and trim any leading/trailing spaces
             var addressParts = getStoreAddress.Split(',')
                                               .Select(part => part.Trim())
@@ -66,6 +71,7 @@ namespace ATRoz.PageObjects
             // Use NUnit assertions to compare
             Assert.That(cityName, Is.EqualTo(exAddress), "City name does not match.");
             Assert.That(storeName, Is.EqualTo(exStoreName), "Store name does not match.");
+            return Task.CompletedTask;
         }
 
         public async Task<string?> GetStoreName()
@@ -75,9 +81,10 @@ namespace ATRoz.PageObjects
             return actStoreName ?? string.Empty;
         }
 
-        public async Task CompareNameStore(string actualName, string expectedName)
+        public Task CompareNameStore(string? actualName, string expectedName)
         {
             Assert.That(actualName, Is.EqualTo(expectedName), "City name does not match.");
+            return Task.CompletedTask;
         }
 
         public async Task DeleteStore()
