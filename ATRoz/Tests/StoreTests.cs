@@ -1,10 +1,6 @@
-using System.Threading.Tasks;
-using Microsoft.Playwright.NUnit;
-using NUnit.Framework;
 using Microsoft.Playwright;
 
 using ATRoz.PageObjects;
-using ATRoz.Tests;
 
 
 namespace ATRoz.Tests
